@@ -8,35 +8,61 @@ The complete set of contributors may be found at http://polymer.github.io/CONTRI
 Code distributed by Google as part of the polymer project is also
 subject to an additional IP rights grant found at http://polymer.github.io/PATENTS
 -->
-
 <html>
 <head>
 
   <title>iron-flex-layout</title>
+
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
 
-  <link rel="import" href="../../paper-styles/paper-styles.html">
-  <link rel="import" href="x-app.html">
+  <link rel="import" href="../../iron-flex-layout/classes.html">
 
   <style>
-
-    html, body, x-app {
-      height: 100%;
-    }
-
     body {
-      margin: 0;
+      font-family: sans-serif;
+      min-width: 416px;
     }
-
+    h2 {
+      padding: 4px;
+    }
+    div {
+      border: 12px solid orange;
+    }
+    div > div {
+      border: 10px solid lightblue;
+    }
+    div > div > div {
+      border: 8px solid lightgreen;
+    }
   </style>
 
 </head>
-<body class="fullbleed">
+<body class="fullbleed vertical layout">
 
-  <x-app></x-app>
+  <h2>fullbleed vertical layout: header</h2>
+
+  <div class="flex horizontal layout">
+
+    <div class="flex-2 vertical center layout">
+
+      <div>center</div>
+      <div style="text-align: center;">center</div>
+      <div style="text-align: right;">center</div>
+
+    </div>
+
+    <div class="flex vertical center-center layout ">
+
+      <div>center-center</div>
+
+    </div>
+
+  </div>
+
+  <h2>fullbleed vertical layout: footer</h2>
 
 </body>
 </html>
